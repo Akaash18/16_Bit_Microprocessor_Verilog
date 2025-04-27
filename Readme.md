@@ -1,4 +1,5 @@
 **Instruction Format & Decoding:**
+
   Instructions are 32-bit wide and broken down using macros (e.g., opcode, destreg, srcreg1, etc.)
 
   Supports both register and immediate mode operations via a modesel bit.
