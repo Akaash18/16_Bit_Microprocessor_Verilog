@@ -328,7 +328,7 @@ end
 ////////////////////////////////////////////////////
 /////////reading instructions 
 
-always@(*)
+always@(posedge clk)
 begin
 if(sys_rst == 1'b1)
 IR = 0;
