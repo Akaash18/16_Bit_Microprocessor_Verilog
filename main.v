@@ -304,21 +304,6 @@ integer PC = 0;
 
 
 ////////////////////////////////////////////////////
-/////////reading instructions 
-
-always@(posedge clk)
-begin
-if(sys_rst == 1'b1)
-IR = 0;
-else
-begin
-IR = inst_mem[PC];
-decode_inst();
-decode_condflag();
-end
-end
-
-////////////////////////////////////////////////////
 ////////////////////////////////// fsm states
 parameter idle = 0, fetch_inst = 1, dec_exec_inst = 2, next_inst = 3, sense_halt = 4, delay_next_inst = 5;
 //////idle : check reset state
