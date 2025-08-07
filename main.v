@@ -299,31 +299,9 @@ initial begin
 $readmemb("inst_data.mem",inst_mem);
 end
  
-////////////////////////////////////////////////////
-//////////reading instructions one after another
 reg [2:0] count = 0;
 integer PC = 0;
 
-always@(posedge clk)
-begin
-  if(sys_rst)
-   begin
-     count <= 0;
-     PC    <= 0;
-   end
-   else 
-   begin
-     if(count < 4)
-     begin
-     count <= count + 1;
-     end
-     else
-     begin
-     count <= 0;
-     PC    <= PC + 1;
-     end
- end
-end
 
 ////////////////////////////////////////////////////
 /////////reading instructions 
