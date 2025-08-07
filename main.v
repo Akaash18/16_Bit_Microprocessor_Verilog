@@ -303,7 +303,7 @@ end
 //////////reading instructions one after another
 reg [2:0] count = 0;
 integer PC = 0;
-/*
+
 always@(posedge clk)
 begin
   if(sys_rst)
@@ -324,10 +324,10 @@ begin
      end
  end
 end
-*/
+
 ////////////////////////////////////////////////////
 /////////reading instructions 
-/*
+
 always@(*)
 begin
 if(sys_rst == 1'b1)
@@ -339,7 +339,7 @@ decode_inst();
 decode_condflag();
 end
 end
-*/
+
 ////////////////////////////////////////////////////
 ////////////////////////////////// fsm states
 parameter idle = 0, fetch_inst = 1, dec_exec_inst = 2, next_inst = 3, sense_halt = 4, delay_next_inst = 5;
